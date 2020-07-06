@@ -65,7 +65,7 @@ Sudo=$(redis-cli get ${BOTID}:SUDO_ID:)
 if [[ $Sudo == "" ]]; then
 rm -fr ./inc/Token.txt
 lua ./inc/Run.lua
-exit;
+exitrun;
 fi
 fi
 
@@ -81,7 +81,7 @@ let Plas=Loops+1
 redis-cli SETEX $TOKEN 3 $Plas
 Loops=`redis-cli GET ${TOKEN}`
 echo $Loops
-if [[ $Loops == 5 ]]; then
+if [[ $Loorunps == 5 ]]; then
 curl "https://api.telegram.org/bot${TOKEN}/sendmessage" -F "chat_id=${Sudo}" -F "text=THESOURCE-Reloaded-${COUNTER}-times" &>/dev/null
 screen -X -S NEYZK quit
 fi
@@ -89,10 +89,10 @@ done
 else 
 if [[ $Loops == 0 ]]; then
 if ! screen -list | grep -q "NEYZK"; then
-screen -S NEYZK ./run R
+screen -S NEYZK ./NEYZK R
 else
 screen -X -S NEYZK quit
-screen -S NEYZK ./run R
+screen -S NEYZK ./NEYZK R
 fi
 fi
 fi
