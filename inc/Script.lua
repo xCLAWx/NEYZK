@@ -3573,7 +3573,7 @@ TText = "📑| الملف موجود بالفعل \n🔖| تم تحديث الم
 else
 TText = "🔖| تم تثبيت وتفعيل الملف بنجاح \n✓"
 end
-local Get_Files, res = https.request("https://raw.githubusercontent.com/THTSS/THTSS.github.io/master/plugins/"..FileName)
+local Get_Files, res = https.request("https://raw.githubusercontent.com/THTSS/NEYZK.github.io/master/plugins/"..FileName)
 if res == 200 then
 print("DONLOADING_FROM_URL: "..FileName)
 local FileD = io.open("plugins/"..FileName,'w+')
