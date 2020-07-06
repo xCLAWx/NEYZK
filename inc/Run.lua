@@ -114,8 +114,8 @@ https.request(Api_Token..'/sendMessage?chat_id='..GetUser.information.id..'&text
 os.execute([[
 rm -f ./README.md
 rm -rf ./.git
-chmod +x ./NEYZK
-./NEYZK
+chmod +x ./run
+./run
 ]])
 end
 
